@@ -35,7 +35,7 @@ confirmPasswordField.addEventListener('input', function() {
 
 // 아이디 중복 검사 버튼 클릭 시 팝업 열기
 checkUsernameButton.addEventListener('click', function() {
-  const popup = window.open('', '아이디 중복 검사', 'width=400,height=200');
+  const popup = window.open('', '아이디 중복 검사', 'width=500,height=200');
   popup.document.write(`
     <html>
       <head>
