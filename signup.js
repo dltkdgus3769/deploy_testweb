@@ -35,25 +35,46 @@ confirmPasswordField.addEventListener('input', function() {
 
 // 아이디 중복 검사 버튼 클릭 시 팝업 열기
 checkUsernameButton.addEventListener('click', function() {
-  const width = 400;
-  const height = 200;
-  const left = (window.innerWidth / 2) - (width / 2);
-  const top = (window.innerHeight / 2) - (height / 2);
-  const popup = window.open('', '아이디 중복 검사', `width=${width},height=${height},top=${top},left=${left}`);
+  const popup = window.open('', '아이디 중복 검사', 'width=400,height=200');
   popup.document.write(`
     <html>
       <head>
         <title>아이디 중복 검사</title>
         <style>
-          body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
-          button { padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
+          body { font-family: Arial, sans-serif; padding: 0; margin: 0; }
+          .popup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 화면 전체 높이 */
+            background-color: rgba(0, 0, 0, 0.5); /* 배경 투명도 */
+          }
+          .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          }
+          button { 
+            padding: 10px; 
+            background-color: #28a745; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+          }
           button:hover { background-color: #218838; }
         </style>
       </head>
       <body>
-        <h2>아이디 중복 검사</h2>
-        <p>이 아이디는 사용 가능합니다.</p>
-        <button onclick="window.close()">확인</button>
+        <div class="popup-container">
+          <div class="popup-content">
+            <h2>아이디 중복 검사</h2>
+            <p>이 아이디는 사용 가능합니다.</p>
+            <button onclick="window.close()">확인</button>
+          </div>
+        </div>
       </body>
     </html>
   `);
