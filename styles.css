@@ -8,9 +8,7 @@ body {
     margin: 0;
   }
 
-  *{
-    border : 1px solid gray;/
-  }
+  
   
   .login-container, .signup-container {
     background-color: white;

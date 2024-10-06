@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이상현의 게시판</title>
+    <link rel="stylesheet" href="board.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="auth-links">
+                <a href="4.login.html">로그인</a>
+                <a href="5.join.html">회원가입</a>
+            </nav>
+            <h1>이상현의 게시판</h1>
+        </header>
+        
+        <section class="search-bar">
+            <input type="text" id="searchInput" placeholder="검색어를 입력하세요..." onkeyup="searchPosts()">
+        </section>
+        
+        <section class="board">
+            <table id="boardTable">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                    </tr>
+                </thead>
+                <tbody id="boardBody">
+                    <tr>
+                        <td>1</td>
+                        <td><a href="1.html">HTML</a></td>
+                        <td>이상현</td>
+                        <td>2024-10-06</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="2.html">CSS</a></td>
+                        <td>이상현</td>
+                        <td>2024-10-05</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="3.html">JavaScript</a></td>
+                        <td>이상현</td>
+                        <td>2024-10-04</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="board.js"></script>
+</body>
+</html>
