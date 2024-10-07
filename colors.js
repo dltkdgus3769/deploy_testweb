@@ -4,6 +4,7 @@ function nightDayHandler(self) {
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
         self.value = 'day'
+        
 
         var alist = document.querySelectorAll('a');
         var i = 0;
