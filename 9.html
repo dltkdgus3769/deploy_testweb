@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid gray;
+            border-style: dashed;
+
+        }
+
+        #p_fieldset {
+            border-style: dotted;
+        }
+
+        #p_6_1 {
+            border-style: double;
+            border-color: blue;
+            color: pink;
+        }
+
+        .p_6 {
+            border-style: none;
+            padding: 30px;
+            margin: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            text-decoration: overline;
+        }
+
+
+        .div_7 {
+            color: #058582;
+            font-weight: 150;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        
+
+        .h_7 {
+            font-weight: 400;
+            font-size: xx-large;
+            text-shadow: 1px 1px 20px red;
+            letter-spacing: 0.3em;
+        }
+        .li_7{
+            list-style-type: lower-latin;
+            list-style-position: inside;
+
+        }
+        .box1{
+            margin:20px;
+            border: 3px solid gray;
+            width: 500px;
+            height: 200px;
+            box-sizing: border-box;
+            border-style: dashed;
+            border-radius: 30%;
+        }
+        .box2{
+            border: 2px double red;
+            width: 300px;
+            height: 300px;
+            box-shadow: 10px 10px 10px 10px yellow;
+        }
+        .img_8{
+            float: top;
+            width: 300px;
+            margin-top: 30px;
+            
+        }
+        .p_8{
+            position: absolute;
+            left:150px;
+            width: 300px;
+            height: 100px;
+            padding: auto;
+            margin-bottom: 500px;
+        }
+        .p_9{
+            width: 500px;
+            height: 200px;
+            background-image: url('coding2.jpg');
+            background-size: 100% 100%;
+            background-origin: border-box;
+            background-position: right bottom;
+            background-attachment: fixed;
+        }
+        .p_9_1{
+            width: 200px;
+            height: 150px;
+            background: yellow;
+            background: linear-gradient(to right bottom, yellow red);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>5단원</h1>
+    <p>
+    <form method="get">
+        <label for="userID">아이디: <input type="text" id="userID" name="ID" placeholder="아이디를 입력하세요"></label>
+        <label for="userPw">비밀번호: <input typle="password" id="userPW" name="PW" placeholder="비밀번호를 입력하세요"></label>
+        <input type="submit" value="로그인">
+    </form>
+    </p>
+    <p id="p_fieldset">
+    <fieldset>
+        <legend>안녕하세요</legend>
+        <legend>반갑습니다.</legend>
+    </fieldset>
+    </p>
+    <ul>
+        <li><input type="checkbox" value="a">A <input type="checkbox" value="b">B</li>
+        <li><input type="radio" name="b">a <input type="radio" name="b">b <input type="radio" name="b">c</li>
+        <li><input type="range" min="0" max="15" value="1"></li>
+        <li><input type="number" min="0" max="20" value="0"></li>
+    </ul>
+
+    <h1>6단원</h1>
+    <div>
+        <h2>EcliPSE 민트</h2>
+        <P class="p_6">인생은 롤러코스터와 같아.둘다 오르막과 내리막이 있으니깐 하지만 두려움에 떨거나 즐기는 것은 너의 선택이야</P>
+        <P id="p_6_1">당신이 할 수 있는 가장 큰 모험은 당신이 꿈꾸는 삶을 사는 것이다</P>
+        <p style="color: red;">내가 좋아하는 것에만 집중하기로 했다. 그 밖의 것들까지 신경 쓰기엔 인생은 너무 짧으니깐</p>
+    </div>
+
+    <h1 class="h_7">7단원</h1>
+    <div>
+        <p class="div_7">안녕하세요</p>
+    </div>
+    <div>
+        <ul>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
+        </ul>
+        <ul class="li_7">
+            <li>asdfadsf</li>
+            <li>3414</li>
+            <li>sgsad</li>
+            <li>141asdf</li>
+        </ul>
+    </div>
+
+    <h1>8단원</h1>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <img src="coding1.jpg" class="img_8">
+    <p class="p_8">afasdfasfsfsfasaf</p>
+
+    <h1>9단원</h1>
+    <p class="p_9"></p>
+    <p class="p_9_1"></p>
+</body>
+
+</html>
