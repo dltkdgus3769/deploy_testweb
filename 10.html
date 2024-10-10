@@ -366,7 +366,7 @@
     </style>
 </head>
 
-<body>
+<p>
     <h1>10단원</h1>
     <div>
         <p>div > p</p>
@@ -594,10 +594,15 @@
     <h1>13단원</h1>
         <h1 id="heading">헤딩 색상 바꾸기</h1>
         
-
-        <input type="text" id="TXT">
-        <input type="button" value="클릭" onclick="click()">
-
+        <p>
+            <input type="text" id="alertTest" placeholder="alert">
+            <input type="button" value="클릭" onclick="alert1()">
+        </p>
+        <p>
+            <input type="text" id="confirmTest" placeholder="confirm">
+            <input type="button" value="클릭" onclick="confirm1()">
+        </p>
+        
     <script>
 
         var heading = document.querySelector('#heading');
@@ -608,9 +613,13 @@
                 heading.style.color = "red";
             }
         }
-        var txt=document.getElementById("TXT");
-        function click(){
-            alert("txt:"+ txt.value);
+        var txt=document.getElementById("alertTest");
+        function alert1(){
+            alert("alert:"+ txt.value);
+        }
+        var txt1=document.getElementById("confirmTest");
+        function confirm1(){
+            confirm("cofirm:"+ txt1.value);
         }
         
         
