@@ -133,14 +133,11 @@
         }
         function changeRandom() {
             var items = document.querySelectorAll("a");
-            var liCount = items.length;
+            var liCount = items.length-1;
             var rand = Math.random();
             var picked = Math.floor((rand * liCount));
             items[picked].click();
-
-
-
-            console.log(items);
+            console.log(picked);
         }
 
         function newRegister() {
