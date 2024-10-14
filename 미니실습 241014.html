@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        li:hover {
+            font-weight: bold;
+            color: blue;
+        }
+
+        li {
+            line-height: 2.5;
+        }
+
+        ul {
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+
+
+        .liMenu {
+            display: inline-block;
+            width: 120px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+
+        }
+
+
+        #result {
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+
+        }
+
+        p {
+            width: 80%;
+            padding: 10px;
+            line-height: 2em;
+        }
+
+        .wrapper {
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        #menuName {
+            width: 200px;
+            height: 100px;
+            margin: 10px auto;
+            text-align: center;
+            font-weight: bold;
+
+        }
+
+        #container {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            width: 370px;
+            float: left;
+            height: 30px;
+            padding-left: 30px;
+        }
+
+        button {
+            width: 90px;
+            height: 30px;
+            float: right;
+            background: #222;
+            color: #fff;
+            border: none;
+        }
+
+        hr {
+            clear: both;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="liMenu"><a href="#" onclick="changeimg('gukbab.jpg','국밥','8000원')">국밥</a></li>
+        <li class="liMenu"><a href="#" onclick="changeimg('ddeukbokki.jpg','떡볶이','5000원')">떡볶이</a></li>
+        <li class="liMenu"><a href="#" onclick="changeimg('pizza.jpg','피자','20000원')">피자</a></li>
+        <li class="liMenu"><a href="#" onclick="changeRandom()">랜덤</a></li>
+
+    </ul>
+    <div id="result" class="wrapper"></div>
+    <p id="menuName"></p>
+
+    <!-- 입력 창에, 먹고 싶은 메뉴를 등록하고, 삭제 하는 기능 -->
+    <div id="container">
+        <form action="">
+            <input type="text" id="hopingMenu" placeholder="메뉴">
+            <!-- <input type="text" id="hopingMenuPrice" placeholder="가격"> -->
+            <button onclick="newRegister(); return false;">추가</button>
+        </form>
+        <hr>
+        <P></P>
+        <ul id="menuList"> </ul>
+    </div>
+
+    <script>
+        function changeimg(menuImg, menu, price) {
+            let result = document.querySelector('#result');
+            let menu1 = document.querySelector('#menuName');
+            result.style.backgroundImage = "url('" + menuImg + "')"
+            menu1.innerText = menu + " " + price;
+        }
+        function changeRandom() {
+            var items = document.querySelectorAll("a");
+            var liCount = items.length;
+            var rand = Math.random();
+            var picked = Math.floor((rand * liCount));
+            items[picked].click();
+
+
+
+            console.log(items);
+        }
+
+        function newRegister() {
+            var newItem = document.createElement("li");  // 요소 노드 추가
+            newItem.className = 'newMenu';
+            var subject = document.querySelector("#hopingMenu");  // 폼의 텍스트 필드
+            //var subject2 = document.querySelector("#hopingMenuPrice");  // 폼의 텍스트 필드
+            var newText = document.createTextNode(subject.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
+            //var newText2 = document.createTextNode(subject2.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
+            //var newMenu = '메뉴: '+ newText +' 가격: '+ newText2;
+            
+            newItem.appendChild(newText);  // 텍스트 노드를 요소 노드의 자식 노드로 추가
+
+            var itemList = document.querySelector("#menuList");  // 웹 문서에서 부모 노드 가져오기 
+            itemList.insertBefore(newItem, itemList.childNodes[0]);  // 자식 노드중 첫번째 노드 앞에 추가
+
+            subject.value = "";
+            //subject2.value = "";
+
+            var items = document.querySelectorAll(".newMenu");  // 모든 항목 가져오기
+            for (i = 0; i < items.length; i++) {
+                items[i].addEventListener("click", function () {  // 항목 클릭했을 때 실행할 함수
+                    if (this.parentNode)    // 부모 노드가 있다면 
+                        this.parentNode.removeChild(this);  // 부모 노드에서 삭제
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
