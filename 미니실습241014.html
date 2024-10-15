@@ -19,6 +19,7 @@
 
         li {
             line-height: 2.5;
+            margin: 10px;
         }
 
         ul {
@@ -31,7 +32,7 @@
 
         .liMenu {
             display: inline-block;
-            width: 120px;
+            width: 100px;
             border: 1px solid #ccc;
             padding: 10px 15px;
             font-size: 16px;
@@ -65,10 +66,12 @@
 
         #menuName {
             width: 200px;
-            height: 100px;
-            margin: 10px auto;
+            height: 20px;
+           
+            margin:  auto;
             text-align: center;
             font-weight: bold;
+            /* border: 1px solid gray; */
 
         }
 
@@ -79,16 +82,17 @@
         }
 
         input[type="text"] {
-            width: 370px;
+            width: 160px;
             float: left;
             height: 30px;
             padding-left: 30px;
+            margin-right: 5px;
         }
 
         button {
             width: 90px;
-            height: 30px;
-            float: right;
+            height: 35px;
+            /* float: right; */
             background: #222;
             color: #fff;
             border: none;
@@ -96,8 +100,8 @@
 
         hr {
             clear: both;
-            display: none;
-        }
+            display:none;
+        } 
     </style>
 </head>
 
@@ -106,6 +110,7 @@
         <li class="liMenu"><a href="#" onclick="changeimg('gukbab.jpg','국밥','8000원')">국밥</a></li>
         <li class="liMenu"><a href="#" onclick="changeimg('ddeukbokki.jpg','떡볶이','5000원')">떡볶이</a></li>
         <li class="liMenu"><a href="#" onclick="changeimg('pizza.jpg','피자','20000원')">피자</a></li>
+        <li class="liMenu"><a href="#" onclick="changeimg('hamberger.jpg','햄버거','8000원')">햄버거</a></li>
         <li class="liMenu"><a href="#" onclick="changeRandom()">랜덤</a></li>
 
     </ul>
@@ -116,7 +121,7 @@
     <div id="container">
         <form action="">
             <input type="text" id="hopingMenu" placeholder="메뉴">
-            <!-- <input type="text" id="hopingMenuPrice" placeholder="가격"> -->
+            <input type="text" id="hopingMenuPrice" placeholder="가격">
             <button onclick="newRegister(); return false;">추가</button>
         </form>
         <hr>
@@ -144,18 +149,19 @@
             var newItem = document.createElement("li");  // 요소 노드 추가
             newItem.className = 'newMenu';
             var subject = document.querySelector("#hopingMenu");  // 폼의 텍스트 필드
-            //var subject2 = document.querySelector("#hopingMenuPrice");  // 폼의 텍스트 필드
-            var newText = document.createTextNode(subject.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
-            //var newText2 = document.createTextNode(subject2.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
-            //var newMenu = '메뉴: '+ newText +' 가격: '+ newText2;
+            var subject2 = document.querySelector("#hopingMenuPrice");  // 폼의 텍스트 필드
+            // var newText = document.createTextNode(subject.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
+            // var newText2 = document.createTextNode(subject2.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
+            var newMenu = '메뉴: '+ subject.value +'   가격: '+ subject2.value;
+            var resultMenu = document.createTextNode(newMenu);
             
-            newItem.appendChild(newText);  // 텍스트 노드를 요소 노드의 자식 노드로 추가
+            newItem.appendChild(resultMenu);  // 텍스트 노드를 요소 노드의 자식 노드로 추가
 
             var itemList = document.querySelector("#menuList");  // 웹 문서에서 부모 노드 가져오기 
             itemList.insertBefore(newItem, itemList.childNodes[0]);  // 자식 노드중 첫번째 노드 앞에 추가
 
             subject.value = "";
-            //subject2.value = "";
+            subject2.value = "";
 
             var items = document.querySelectorAll(".newMenu");  // 모든 항목 가져오기
             for (i = 0; i < items.length; i++) {

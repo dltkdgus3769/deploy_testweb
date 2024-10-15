@@ -2,14 +2,14 @@ function nightDayHandler(self) {
     var target = document.querySelector('body');
     if (self.value === 'night') {
         target.style.backgroundColor = 'black';
-        target.style.color = 'white';
+        target.style.color = 'brack';
         self.value = 'day'
         
 
         var alist = document.querySelectorAll('a');
         var i = 0;
         while (i < alist.length) {
-            alist[i].style.color = 'powderblue';
+            alist[i].style.color = 'black';
             console.log(alist[i]);
             i = i + 1;
         }
@@ -21,7 +21,7 @@ function nightDayHandler(self) {
         var alist = document.querySelectorAll('a');
         var i = 0;
         while (i < alist.length) {
-            alist[i].style.color = 'blue';
+            alist[i].style.color = 'black';
             console.log(alist[i]);
             i = i + 1;
         }
