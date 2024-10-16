@@ -1,0 +1,190 @@
+html {
+    height: 100%;
+}
+
+body {
+
+    margin: 0px;
+    /* margin-bottom: 200px; */
+    height: 100%;
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    height: 100%;
+    /* 뷰포트의 전체 높이 */
+    background-color: #f0f0f0;
+    /* 배경색 */
+    display: flex;
+    flex-direction: column;
+   
+
+
+}
+
+main {
+    flex: 1;
+    /* 남은 공간을 차지하도록 설정 */
+    width: 100%;
+    overflow-y: auto;
+}
+
+.header {
+
+    
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    color: white;
+    background: teal;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    /* 헤더를 상단에 고정 */
+    z-index: 1;
+
+}
+
+
+.header a {
+    color: white;
+    text-decoration: none;
+    width: 80%;
+}
+
+.header nav {
+    margin: 0px;
+    padding: 50px;
+}
+
+.container {
+    width: 800px;
+    margin: 100px auto;
+    background-color: #f5c3c359;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    
+
+}
+
+.container a {
+    text-decoration: none;
+
+}
+
+.container a:hover {
+    font-weight: bold;
+}
+
+#registButton {
+    margin: 10px;
+    width: 70px;
+    padding: 10px;
+    background-color: #f8f3af;
+    color: rgb(0, 0, 0);
+    border: #a8a8a8 solid;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
+
+#boardTable {
+    width: 100%;
+    /* 테이블이 전체 폭을 차지하도록 설정 */
+    border-collapse: collapse;
+    /* 경계선 합치기 */
+
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    /* 경계선 스타일 */
+    padding: 8px;
+    /* 내부 여백 */
+    text-align: center;
+    /* 텍스트 정렬 */
+}
+
+.col1 {
+    width: 10%;
+    /* 순서 열 너비 */
+}
+
+.col2 {
+    width: 60%;
+    /* 제목 열 너비 */
+}
+
+.col3 {
+    width: 15%;
+    /* 작성자 열 너비 */
+}
+
+.col4 {
+    width: 15%;
+    /* 작성일 열 너비 */
+}
+
+.search-bar {
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.board {
+    margin: 20px;
+}
+
+.footer {
+    background-color: #333;
+    /* 푸터 배경색 */
+    color: white;
+    /* 푸터 글자색 */
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    /* 중앙 정렬 */
+    width: 100%;
+
+}
+
+.footer-section {
+    margin-top: 10px;
+    margin-right: 50px;
+    /* 섹션 간 여백 */
+    display: inline-block;
+    height: 80px;
+
+}
+
+.footer-section img {
+    width: 50px;
+    margin-top: 10px;
+
+}
+
+.footer-section p {
+    font-size: 10px;
+
+}
+
+.footer-section h5 {
+    margin: 0;
+}

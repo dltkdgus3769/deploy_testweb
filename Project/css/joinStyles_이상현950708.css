@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    height: 100%;
+    /* 뷰포트의 전체 높이 */
+    background-color: #f0f0f0;
+    /* 배경색 */
+}
+
+header {
+    height: 50px;
+    padding: 1rem;
+    color: white;
+    background: teal;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    width: 80%;
+}
+header nav{
+    margin: 0px;
+    padding: 50px;
+}
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+}
+
+button[type="button"] {
+    background-color: #f44336;
+    /* Red */
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#message {
+    
+    font-size: small;
+    text-align: right;
+    color: red;
+}
+#message.success {
+    color: green;
+}
+
+.footer {
+    background-color: #333; /* 푸터 배경색 */
+    color: white; /* 푸터 글자색 */
+    position: absolute;
+    left: 0;
+    right: 0; /* 좌우 끝까지 확장 */
+    bottom: 0;
+    text-align: center; /* 중앙 정렬 */
+    
+    
+}
+
+.footer-section {
+    margin-top: 10px;
+    margin-right: 50px; /* 섹션 간 여백 */
+    display: inline-block;
+    height: 80px;
+
+}
+.footer-section img{
+    width : 50px; 
+    margin-top: 10px;
+
+}
+
+.footer-section p{
+    font-size: 10px;
+
+}
+.footer-section h5{
+    margin:0;
+}

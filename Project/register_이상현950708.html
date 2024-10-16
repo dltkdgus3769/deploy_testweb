@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register_이상현950708.css">
+    <title>게시판</title>
+    <header>
+        <h1><a href=main_이상현950708.html><img src="image/home.png" width="30px"> 이상현 게시판</a></h1>
+
+    </header>
+</head>
+
+<body>
+    <div class="container">
+        <h1>게시판</h1>
+        <form id="board-form">
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="content">내용</label>
+                <textarea id="content" rows="20" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="file">파일 첨부</label>
+                <input type="file" id="file">
+            </div>
+            <div class="button-group" style="text-align: center;">
+                <button type="button" id="clear-button">내용 삭제</button>
+                <button type="submit">등록</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <img src="image/technical.png">
+        </div>
+        <div class="footer-section">
+            <h5>수강 정보</h5>
+            <p>수강생: 이상현</p>
+            <p>수강과정: (K디지털) AI&빅데이터 분석 활용 풀스택 서비스 개발</p>
+        </div>
+        <div class="footer-section">
+            <h5>연락처</h5>
+            <p>전화번호 : 010-4949-3769</p>
+            <p>이메일 : tkdgus3769@naver.com</p>
+        </div>
+        
+    </div>
+
+    <script src="js/register_이상현950708.js"></script>
+</body>
+
+</html>

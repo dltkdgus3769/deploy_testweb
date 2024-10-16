@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    height: 100vh;
+    /* 뷰포트의 전체 높이 */
+    background-color: #f0f0f0;
+    /* 배경색 */
+}
+
+header {
+    height: 50px;
+    padding: 1rem;
+    color: white;
+    background: teal;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    width: 80%;
+}
+
+.container {
+    
+    max-width: 600px;
+    margin: 10px auto;
+    background: rgba(255, 255, 255, 0.788);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 30%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#clear-button {
+    background-color: #dc3545; /* 빨간색 배경 */
+}
+
+#clear-button:hover {
+    background-color: #c82333; /* 빨간색 배경 (호버 시) */
+}
+
+.footer {
+    background-color: #333; /* 푸터 배경색 */
+    color: white; /* 푸터 글자색 */
+    position: absolute;
+    left: 0;
+    right: 0; /* 좌우 끝까지 확장 */
+    bottom: 0;
+    text-align: center; /* 중앙 정렬 */
+    
+    
+}
+
+.footer-section {
+    margin-top: 10px;
+    margin-right: 50px; /* 섹션 간 여백 */
+    display: inline-block;
+    height: 80px;
+
+}
+.footer-section img{
+    width : 50px; 
+    margin-top: 10px;
+
+}
+
+.footer-section p{
+    font-size: 10px;
+
+}
+.footer-section h5{
+    margin:0;
+}

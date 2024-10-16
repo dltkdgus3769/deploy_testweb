@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles_이상현950708.css" />
+    
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <h1><a href=main_이상현950708.html><img src="image/home.png" width="30px"> 이상현 게시판</a></h1>
+            <nav>
+                <span><a href="login_이상현950708.html">로그인</a></span>
+                <span><a href="join_이상현950708.html">회원가입</a></span>
+    
+            </nav>
+        </div>
+        <div class="container">
+            <div style="text-align: right;">
+                <button id="registButton" type="button" onclick="goToRegister()">등록</button>
+                <section class="search-bar">
+                    <input type="text" id="searchInput" placeholder="검색어를 입력하세요..." onkeyup="searchPosts()">
+                </section>
+            </div>
+            <section class="board">
+                <table id="boardTable">
+                    <thead>
+                        <tr>
+                            <th class="col1">순서</td>
+                            <th class="col2">제목</td>
+                            <th class="col3">작성자</td>
+                            <th class="col4">작성일</td>
+                        </tr>
+                    </thead>
+                    <tbody id="boardBody">
+                        <tr>
+                            <td>1</td>
+                            <td><a href="detail1_이상현950708.html">HTML이란 무엇인가?</a></td>
+                            <td>이상현</td>
+                            <td>2024-09-13</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="detail2_이상현950708.html">CSS란 무엇인가?</a></td>
+                            <td>이상현</td>
+                            <td>2024-10-15</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="detail3_이상현950708.html">JavaScript 무엇인가?</a></td>
+                            <td>이상현</td>
+                            <td>2024-10-15</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="detail4_이상현950708.html">채식주의자-한강</a></td>
+                            <td>이상현</td>
+                            <td>2024-10-15</td>
+                        </tr>
+                        
+                        
+                        
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-section">
+            <img src="image/technical.png">
+        </div>
+        <div class="footer-section">
+            <h5>수강 정보</h5>
+            <p>수강생: 이상현</p>
+            <p>수강과정: (K디지털) AI&빅데이터 분석 활용 풀스택 서비스 개발</p>
+        </div>
+        <div class="footer-section">
+            <h5>연락처</h5>
+            <p>전화번호 : 010-4949-3769</p>
+            <p>이메일 : tkdgus3769@naver.com</p>
+        </div>
+
+    </footer>
+
+
+    <script src="js/js_이상현950708.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+html {
+    height: 100%;
+}
+
+body {
+
+    margin: 0px;
+    /* margin-bottom: 200px; */
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    height: 100%;
+    /* 뷰포트의 전체 높이 */
+    background-color: #f0f0f0;
+    /* 배경색 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    /* 최소 높이를 100vh로 설정 */
+
+
+}
+main {
+    flex: 1; /* 남은 공간을 차지하도록 설정 */
+    width: 100%;
+}
+.header {
+    
+    margin: 0;
+    width: 100%;
+    height: 80px;
+    
+    color: white;
+    background: teal;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position : relative;
+    top: 0; /* 헤더를 상단에 고정 */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+
+.header a {
+    color: white;
+    text-decoration: none;
+    width: 80%;
+}
+.header nav{
+    margin: 0px;
+    padding: 50px;
+}
+
+#grid ul {
+    border-right: 1px solid gray;
+    width: 150px;
+    margin: 0;
+    padding: 20px;
+    list-style:none;
+    
+    
+}
+#grid ul a{
+    text-decoration: none;
+    font-size: 15px;
+    
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    height: 100%;
+    position: relative;
+
+}
+
+#article {
+    padding-left: 80px;
+    position: relative;
+}
+
+
+
+
+.custom-list li {
+    position: relative; /* 상대 위치 설정 */
+    padding-left: 30px; /* 이미지 공간 확보 */
+    margin: 10px; /* 항목 간격 */
+    
+}
+
+.custom-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; /* 리스트 항목 왼쪽에 위치 */
+    top: 50%; /* 중앙 정렬 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    background-image: url('../image/check.png'); /* 이미지 URL */
+    background-size: 20px 20px; /* 이미지 크기 조절 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    width: 20px; /* 너비 */
+    height: 20px; /* 높이 */
+}
+
+.image {
+    float:right;
+    width: 300px; /* 이미지 너비 조정 */
+    margin: 20px; /* 텍스트와의 간격 조정 */
+    
+    
+}
+
+.footer {
+    background-color: #333; /* 푸터 배경색 */
+    color: white; /* 푸터 글자색 */
+    position: relative;
+    left: 0;
+    right: 0; /* 좌우 끝까지 확장 */
+    bottom: 0;
+    text-align: center; /* 중앙 정렬 */
+    width: 100%;
+    
+}
+
+.footer-section {
+    margin-top: 10px;
+    margin-right: 50px; /* 섹션 간 여백 */
+    display: inline-block;
+    height: 80px;
+
+}
+.footer-section img{
+    width : 50px; 
+    margin-top: 10px;
+
+}
+
+.footer-section p{
+    font-size: 10px;
+
+}
+.footer-section h5{
+    margin:0;
+}
